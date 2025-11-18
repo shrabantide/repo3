@@ -3,8 +3,7 @@ name: Schedule Example (test)
 on:
   schedule:
     - cron: "*/5 * * * *"
-  workflow_dispatch:
-
+    
 jobs:
   hello:
     runs-on: ubuntu-latest
