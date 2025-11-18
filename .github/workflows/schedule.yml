@@ -1,0 +1,14 @@
+name: Run every 5 minutes
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  every_five:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show timestamp
+        run: |
+          echo "Scheduled run at: $(date -u) (UTC)"
